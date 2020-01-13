@@ -22,7 +22,7 @@ resource "aws_security_group" "allow_ssh" {
 
 resource "aws_key_pair" "my-key" {
   key_name   = "my-key"
-  public_key = "${var.pubkey}"
+  public_key = var.pubkey
 }
 
 output "example_public_dns" {
